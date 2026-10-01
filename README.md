@@ -42,13 +42,13 @@ there means publishing. Until then, use the copy route below for those two. This
 `.agents/plugins/marketplace.json` for the cross-tool marketplace format, untested against either.
 
 In Claude Code every skill is then `/thoughtline:<name>` — `/thoughtline:project-start`,
-`/thoughtline:notes-plans`, and so on. **Pin a release** by adding `#v0.1.0` to the marketplace
-source; auto-update is off by default for third-party marketplaces, so you get updates when you ask
-for them with `claude plugin update thoughtline@thoughtline-skills`.
+`/thoughtline:notes-plans`, and so on. Auto-update is off by default for third-party
+marketplaces, so you get updates when you ask for them with
+`claude plugin update thoughtline@thoughtline-skills`.
 
 ### By copying the skills in
 
-Works everywhere, including from a private clone:
+Works everywhere, with no plugin system involved:
 
 ```bash
 git clone https://github.com/rohit-cpd/thoughtLine.git && cd thoughtLine
