@@ -1,0 +1,21 @@
+{
+  "name": "thoughtline-skills",
+  "interface": {
+    "displayName": "ThoughtLine"
+  },
+  "plugins": [
+    {
+      "name": "thoughtline",
+      "source": {
+        "source": "url",
+        "url": "./"
+      },
+      "description": "Skills for research-to-production projects: phase lifecycle, a disciplined notes trail, and code workflow.",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# OS junk
+.DS_Store
+._*
+Thumbs.db
+
+# Editors and agent tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+.cursor/
+.agent/
+.agents/skills/
+
+# Python — this repo ships one script, project-state-brief/scripts/validate_notes.py
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.venv/
+venv/
+
+# Secrets
+.env
+.env.local
+
+# Not published: the vision doc folder (spelling matches the folder on disk)
+porject_documents/
+
+# Kept from the previous file — see note before removing any of these:
+# this library's own working notes, scratch test copies, and changelog drafts.
+Notes/
+SKILLS_TEST*
+CHANGELOG*

@@ -1,0 +1,21 @@
+{
+  "name": "thoughtline",
+  "description": "Skills for research-to-production projects: phase lifecycle, a disciplined notes trail, and code workflow that keeps research and production apart.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Rohit Bhardwaj",
+    "email": "rohit.cpd@gmail.com"
+  },
+  "homepage": "https://github.com/rohit-cpd/thoughtLine",
+  "repository": "https://github.com/rohit-cpd/thoughtLine",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "notes",
+    "documentation",
+    "project-lifecycle",
+    "phases",
+    "research",
+    "workflow"
+  ]
+}
