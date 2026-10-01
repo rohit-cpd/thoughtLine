@@ -3,17 +3,18 @@
 ._*
 Thumbs.db
 
-# Editors and agent tooling
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
+
+# Local installs of this library's own skills — skills/ is the single source
 .claude/
 .cursor/
-.agent/
 .agents/skills/
 
-# Python — this repo ships one script, project-state-brief/scripts/validate_notes.py
+# Python — this repo ships one script, skills/project-state-brief/scripts/validate_notes.py
 __pycache__/
 *.py[cod]
 .ruff_cache/
@@ -24,11 +25,5 @@ venv/
 .env
 .env.local
 
-# Not published: the vision doc folder (spelling matches the folder on disk)
-porject_documents/
-
-# Kept from the previous file — see note before removing any of these:
-# this library's own working notes, scratch test copies, and changelog drafts.
+# This library's own working notes — not published
 Notes/
-SKILLS_TEST*
-CHANGELOG*
