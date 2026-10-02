@@ -48,15 +48,29 @@ marketplaces, so you get updates when you ask for them with
 
 ### By copying the skills in
 
-Works everywhere, with no plugin system involved:
+Works everywhere, with no plugin system involved. Clone first:
 
 ```bash
-git clone https://github.com/rohit-cpd/thoughtLine.git && cd thoughtLine
-mkdir -p ~/.claude/skills  && cp -R skills/* ~/.claude/skills/    # Claude Code
-mkdir -p ~/.agents/skills  && cp -R skills/* ~/.agents/skills/    # Codex, Copilot, Cursor
+git clone https://github.com/rohit-cpd/thoughtLine.git
+cd thoughtLine
 ```
 
-`~/.agents/skills/` is the cross-tool path and one copy serves all three. For a single project, use
+Then copy the skills to wherever your tool reads them. For **Claude Code**:
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R skills/* ~/.claude/skills/
+```
+
+For **Codex, Copilot and Cursor**:
+
+```bash
+mkdir -p ~/.agents/skills
+cp -R skills/* ~/.agents/skills/
+```
+
+Restart your tool afterwards so it rescans for skills. `~/.agents/skills/` is the cross-tool path and
+one copy serves all three. For a single project, use
 `.agents/skills/` inside that repo — Codex walks up the tree scanning every one it finds, so a
 monorepo can carry skills at the root and in sub-projects. Symlink instead of copying to track
 updates: `ln -s "$PWD/skills" ~/.agents/skills`.
