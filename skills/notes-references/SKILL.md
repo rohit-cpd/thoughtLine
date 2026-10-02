@@ -178,7 +178,8 @@ content — structure only.
 - One reference file is written by another skill: `phase-transition` puts a
   `phase-<NN>-archive-index.md` here at each boundary. It is a map of the previous
   phase's documents, not a copy of them — leave it alone and do not duplicate its content.
-- Do not overwrite existing reference files — create a new dated file per topic. If a later
-  document replaces this one, set `status: superseded` and `superseded_by` here rather than
-  editing the body.
+- **A new date is not a new file.** Append a dated entry to the subject's existing file and update
+  *Current understanding* to match; a new file is created only when the subject itself is new. See
+  *Appending to a topic file* above. If a later document replaces this one wholesale, set
+  `status: superseded` and `superseded_by` here rather than editing the body.
 - Keep chat response short; point to the created file rather than repeating it in full.

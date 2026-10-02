@@ -157,7 +157,8 @@ only what applies that day:
   stands* if the position moved.
 
 ## Notes
-- Do not overwrite existing discussion files — create a new dated file per discussion topic.
+- **A new date is not a new file.** Append a dated section to the topic's existing log; a new file
+  is created only when the topic itself is new. See *Appending to a topic log* above.
 - Keep chat response short; point to the created file rather than repeating it in full.
 - If the discussion also produces a plan or a reference writeup, still create those via
   `notes-plans` / `notes-references` and cross-link them under "Companion docs"

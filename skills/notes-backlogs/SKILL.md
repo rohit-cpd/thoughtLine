@@ -31,7 +31,7 @@ files, or another `notes-*` folder — each has its own owner.
 |---|---|
 | **New area backlog file** | **Ask first.** A whole new tracked area is the user's call. If work is being parked and no area file covers it, say so and ask whether to start one — don't write it silently, and don't drop it either. |
 | **Existing area file** | **Update it on your own.** Adding an item, closing one, re-prioritising, filling `Closed:` — no permission needed. |
-| **The `<area>-backlog-closed.md` companion** | **Ask.** It is a new file, so it falls under the first row (see *When closed items start to dominate a file*). |
+| **The `<area>-closed-backlog.md` companion** | **Ask.** It is a new file, so it falls under the first row (see *When closed items start to dominate a file*). |
 
 **Keeping an existing file current is the automatic half.** When code ships that closes an item,
 close it — set the keyword, write the `Closed:` line, leave `Context` intact. When a change or a
@@ -165,7 +165,8 @@ Once an area file's `done`/`dropped`/`superseded` items outnumber its `open`/`in
 `blocked` ones, split the closed items out — don't wait for a phase boundary to do it.
 
 - Move every closed item **verbatim** — `Context`, `Closed:`, everything — into a companion
-  file: `Notes/Backlogs/<area-slug>-backlog-closed.md`. This is a move, not a deletion; rule 2
+  file: `Notes/Backlogs/<area-slug>-closed-backlog.md`. The name ends in `-backlog.md` so the
+  file matches the folder's convention and is found by tooling that globs for it. This is a move, not a deletion; rule 2
   still applies, it just applies across two files now instead of one.
 - Give the companion file the same frontmatter shape, with `status: "closed"` (this file holds
   no open work by definition) and `companion_docs` pointing back at the active file — and the

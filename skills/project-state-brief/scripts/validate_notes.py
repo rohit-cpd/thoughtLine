@@ -106,8 +106,10 @@ def notes_line(p, msg): NOTES.append((p, msg))
 FOLDERS = {
     "Plans":         r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+\.md$",
     "Architecture":  r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+\.md$",
-    "References":    r"^[a-z0-9-]+\.md$",
-    "Discussions":   r"^[a-z0-9-]+\.md$",
+    # The negative lookahead is load-bearing: a date is made of digits and hyphens, so a plain
+    # [a-z0-9-]+ would accept 2026-03-04-topic.md and leave the "never date these" rule unenforced.
+    "References":    r"^(?!\d{4}-\d{2}-\d{2})[a-z0-9-]+\.md$",
+    "Discussions":   r"^(?!\d{4}-\d{2}-\d{2})[a-z0-9-]+\.md$",
     "Backlogs":      r"^[a-z0-9-]+-backlog\.md$",
 }
 

@@ -9,7 +9,7 @@ sections 4, 5, 6 and 9 respectively, plus the debt line. **The archive index the
 wrote is at the end of this file** — step 5c's output, and the one document that lands in the
 *new* phase rather than in the archive.
 
-**The Meterstream phase had more documents than this library bundles.** Seven `EXAMPLE_*` files
+**The Meterstream phase had more documents than this library bundles.** Eight `EXAMPLE_*` files
 ship here; the tables below cite a few others (`Plans/2026-02-18-mailer-backoff.md`,
 `References/mailer-api.md`, `Notes/2026-02-14-notes.md`) that exist only inside the fiction. That
 is deliberate — a closeout whose every citation resolved would be a closeout of a two-document
