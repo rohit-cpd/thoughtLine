@@ -115,3 +115,6 @@ These move or rewrite files across the whole project. **A statement that a phase
 has ended is not an instruction to archive it.** `phase-transition` runs light by
 default, and hands off rather than invoking: run `project-knowledge`, then
 `phase-context`, after it finishes.
+
+`thoughtline-update` also runs only when named. It rewrites installed skill folders, never
+project files, and reports before it changes anything.

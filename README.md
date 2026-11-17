@@ -1,6 +1,6 @@
 # ThoughtLine
 
-**A project-memory system for coding agents.** 21 skills that keep the reasoning behind a project on
+**A project-memory system for coding agents.** 22 skills that keep the reasoning behind a project on
 disk — what was decided and why, what's still open, how the system actually works — so a new
 session, or a new person, can pick it up without archaeology.
 
@@ -74,6 +74,14 @@ one copy serves all three. For a single project, use
 `.agents/skills/` inside that repo — Codex walks up the tree scanning every one it finds, so a
 monorepo can carry skills at the root and in sub-projects. Symlink instead of copying to track
 updates: `ln -s "$PWD/skills" ~/.agents/skills`.
+
+### Updating
+
+Name the `thoughtline-update` skill — *"update thoughtline"*. It finds every install on the
+machine and updates each the way it was installed: the plugin manager's own update for a plugin,
+`git pull` for a symlinked clone, a re-copy for copied folders. It reports first and changes nothing
+until you confirm, keeps any skill you edited locally, never touches other skills in the same
+directory, and moves replaced folders to `~/.thoughtline/backups/` rather than deleting them.
 
 ---
 
@@ -199,6 +207,15 @@ states the resulting position. `phase-transition` runs **light by default** (fou
 minutes) and heavy on request, because a procedure heavy enough to dread is one that gets skipped.
 It also never deletes: it *moves* the tree, so there's no window where a partial copy is followed by
 a successful delete.
+
+### Maintenance — you name this explicitly
+
+| Skill | What it does |
+|---|---|
+| `thoughtline-update` | Updates installed ThoughtLine skills from GitHub, the matching way for how each install was made |
+
+Also `disable-model-invocation: true`. It touches only ThoughtLine's own skill folders, dry-runs
+before every change, and backs up whatever it replaces.
 
 ---
 
